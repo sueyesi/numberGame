@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 게임</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <h1>숫자 게임 <span id="answerArea"></span></h1>
+            <div class="msgArea">
+                <div id="resultArea"  class="">
+                    <div class="result">정답을 맞춰보세요!!</div>                    
+                </div>
+                <div id="chancesArea" class="chance"></div>                
+            </div>
+            <div>
+                <input type="nember" id="userInput" class="userInputStyle">
+                <button id="palyButton">GO</button>                
+            </div>
+            <button id="resetButton">재도전</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
