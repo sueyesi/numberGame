@@ -117,7 +117,7 @@ function play(){
 
 function resetGame(){    
     userInput.value = ""; //입력창 리셋
-    historyArea.textContent="지금까지 나온 번호";
+    historyArea.textContent="=^^=";
     resultArea.textContent ="게임을 새로 시작합니다." 
     palyButton.disabled = false;
     gameOver = false; 
