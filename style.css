@@ -35,6 +35,10 @@ html{
     flex-direction: column;
     justify-content: center;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    
+}
+h1{
+    margin-bottom: 80px;
 }
 h1 span{
     background: #8b78f5;
@@ -43,14 +47,40 @@ h1 span{
     border-radius: 0 20px 0 20px;
     color: #fff;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
 }
 .msgArea{
     position: relative;
 }
 .chance{
     position: absolute;
-    right: 16%;
-    top: 0;
+    right: 5%;
+    top: -20px; 
+    width: 30%;
+    height: 40px;
+    line-height: 40px;
+    background: #ffab04;
+    border-radius: 30px;
+    padding: 0 20px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.history{
+    position: absolute;
+    left: 5%;
+    top: -20px; 
+    width: 30%;
+    height: 40px;
+    line-height: 40px;
+    background: #ff5eaa;
+    border-radius: 30px;    
+    font-size: 0.73rem;
+    padding: 0 20px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.history span{    
+    
 }
 #resultArea{
     width: 70%;
@@ -102,8 +132,8 @@ h1 span{
     padding: 10px;
     color: #fff;
 }
-#palyButton:hover{
-    background: #8b78f5;
+button:hover{
+    background: #8b78f5 !important;
 }
 #palyButton:disabled{
     background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
@@ -119,10 +149,11 @@ button{
     margin: 0 auto;  
     position: absolute;
     left: calc(50% - 15%);
-    bottom:10%;
+    bottom:5%;
     padding: 10px;
-    background: #ff5eaa;
+    border-radius: 30px;
+    background: #01cdd4;
     border: none;;
     color: #fff;
-    font-size: 1.5rem;     
+    font-size: 1.1rem;     
 }

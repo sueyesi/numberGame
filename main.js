@@ -20,6 +20,7 @@ let palyButton = document.getElementById("palyButton"); //버튼의 id값을 가
 let userInput = document.getElementById("userInput"); // 유저가 입력한 input의 id값
 let resultArea = document.getElementById("resultArea");
 let answerArea = document.getElementById("answerArea");
+let historyArea = document.getElementById("historyArea");
 let history = [];// 이전에 입력한 숫자들을 저장하는 배열
 let chances = 3;
 let gameOver = false;
@@ -49,6 +50,13 @@ function play(){
     let userValue = userInput.value; //유저가 입력한 값을 userValue함수에 넣어준다.
     console.log(userValue)
     resultArea.className = "";
+
+    //값을 입력하지 않았을경우??
+    if(userValue == ''){
+        resultArea.textContent = "값이 입력되지 않았습니다. 숫자를 입력해주세요"
+        resultArea.classList.add("etcText");
+        return;
+    }
     //숫자가 아닌 값을 입력했는지??
     if (isNaN(userValue)){
         resultArea.textContent = "숫자가 아닙니다. 1~30사이 숫자를 입력해주세요."
@@ -68,11 +76,7 @@ function play(){
         return;
     }
 
-    if(userValue == ''){
-        resultArea.textContent = "값이 입력되지 않았습니다. 숫자를 입력해주세요"
-        resultArea.classList.add("etcText");
-        return;
-    }
+    
     chances--; 
     //console.log("chance", chances)
     chancesArea.textContent = `남은기회 : ${chances}`;//백틱을 쓰면 동적인 값과 정적인 값을 같이 줄수있다    
@@ -99,20 +103,21 @@ function play(){
         gameOver = true;   
     }
     history.push(userValue) // 
-    console.log(history)   
+    console.log(history)  
+    historyArea.textContent = `${history}`; 
     if(chances < 1){
         gameOver = true;
     }
 
     if (gameOver == true){
-        palyButton.disabled = true;
-        
+        palyButton.disabled = true;        
     } 
 }
 
 
 function resetGame(){    
     userInput.value = ""; //입력창 리셋
+    historyArea.textContent="지금까지 나온 번호";
     resultArea.textContent ="게임을 새로 시작합니다." 
     palyButton.disabled = false;
     gameOver = false; 
