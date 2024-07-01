@@ -12,6 +12,7 @@ html{
     font-family: 'GmarketSansMedium';    
     font-size: 18px;
     box-sizing: border-box; 
+    min-width: 320px;
 }
 .wrap{
     width: 100%;
@@ -176,10 +177,10 @@ button{
         border-radius: 0;
     }
     .chance{       
-        width: 40%;
+        width: 50%;
     }
     .history{        
-        width: 40%;
+        width: 20%;
        
     }
 }
