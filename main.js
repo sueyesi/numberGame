@@ -79,8 +79,11 @@ function play(){
     
     chances--; 
     //console.log("chance", chances)
-    chancesArea.textContent = `남은기회 : ${chances}`;//백틱을 쓰면 동적인 값과 정적인 값을 같이 줄수있다    
-    if(chances < 1){
+    chancesArea.textContent = `남은기회 : ${chances}`;//백틱을 쓰면 동적인 값과 정적인 값을 같이 줄수있다  
+    
+    console.log(chances <= 0);
+    console.log(userValue !== answerNum);  
+    if(chances <= 0 && userValue !== answerNum){
         chancesArea.textContent = "남은 기회가 없습니다.";
         resultArea.textContent = "아쉽지만 다시 도전하세요"
         resultArea.classList.add("failure");
