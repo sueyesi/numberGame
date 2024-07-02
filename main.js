@@ -35,8 +35,7 @@ userInput.addEventListener("focus", inputReset);
 
 //랜덤번호 추출 함수
 function randomNum(){
-    answerNum = Math.floor(Math.random() * 30)+1
-    console.log("정답",answerNum)
+    answerNum = Math.floor(Math.random() * 30)+1    
     answerArea.textContent =`${answerNum}`;
     resultArea.classList.remove("block");
 }
@@ -47,8 +46,7 @@ function inputReset(){
 
 // playButton 클릭시 호출할 함수
 function play(){
-    let userValue = userInput.value; //유저가 입력한 값을 userValue함수에 넣어준다.
-    console.log(userValue)
+    let userValue = userInput.value; //유저가 입력한 값을 userValue함수에 넣어준다.    
     resultArea.className = "";
 
     //값을 입력하지 않았을경우??
@@ -83,7 +81,10 @@ function play(){
     
     console.log(chances <= 0);
     console.log(userValue !== answerNum);  
-    if(chances <= 0 && userValue !== answerNum){
+    
+    console.log(typeof userValue);
+    console.log(typeof answerNum);
+    if(chances <= 0 && userValue != answerNum){
         chancesArea.textContent = "남은 기회가 없습니다.";
         resultArea.textContent = "아쉽지만 다시 도전하세요"
         resultArea.classList.add("failure");
